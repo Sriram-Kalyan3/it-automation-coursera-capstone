@@ -10,7 +10,8 @@ def get_all_image_files(image_dir):
 
 
 def modify_images():
-    image_dir = '\supplier-data\images'
+    # image_dir = '\supplier-data\images'   #To work in windows
+    image_dir = '/supplier-data/images'
     images = get_all_image_files(image_dir)
 
     image_dir = 'supplier-data/images/'
