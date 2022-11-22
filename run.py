@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from opcode import opname
 import os
 import requests
 
@@ -35,7 +34,7 @@ def post_txt(url):
         with open(txt_dir + filename, 'r') as file:
             json_val = process_txt(file, filename)
             print(json_val)
-            # requests.post(url, json=json_val)
+            requests.post(url, json=json_val)
 
 
 url = 'http://localhost/fruits/'
