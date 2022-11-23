@@ -32,8 +32,7 @@ def generate_email_without_attachment(sender, recipient, subject, body):
 
 
 def send_email(message, mail_pass):
-    mail_server = smtplib.SMTP_SSL('smtp.example.com')
+    mail_server = smtplib.SMTP('localhost')
     mail_server.set_debuglevel(1)
-    mail_server.login(message['From'], mail_pass)
     mail_server.send_message(message)
     mail_server.quit()

@@ -41,7 +41,7 @@ if __name__ == "__main__":
     present_date = datetime.datetime.now().strftime("%B %d, %Y")
     report_title = 'Processed Update on ' + present_date
     print(report_title)
-    reports.generate_report('processed.pdf', report_title, para_dict)
+    reports.generate_report('/tmp/processed.pdf', report_title, para_dict)
 
     sender = 'automation@example.com'
     recipient = '{}@example.com'.format(os.environ.get('USER'))
