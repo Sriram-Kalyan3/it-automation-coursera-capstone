@@ -44,9 +44,7 @@ if __name__ == "__main__":
     reports.generate_report('processed.pdf', report_title, para_dict)
 
     sender = 'automation@example.com'
-    # Replace username with the username given in the Connection Details Panel on the right hand side.
-    username = 'student32'
-    recipient = '{}@example.com'.format(username)
+    recipient = '{}@example.com'.format(os.environ.get('USER'))
     subject = 'Upload Completed - Online Fruit Store'
     body = "All fruits are uploaded to our website successfully. A detailed list is attached to this email."
     attachment = '/tmp/processed.pdf'
